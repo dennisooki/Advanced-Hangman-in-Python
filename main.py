@@ -21,21 +21,22 @@ def difficultySel():
   print("3.  HARD-No hints")
   print("99. LEGACY-Just throws words at you, no context:LEGACY HANGMAN")
   difficulty=input()
+  
   if difficulty == '1' or difficulty.upper()=='EASY':
     print('N00B difficulty selected')
-    return difficulty
+    gameModeSel('EASY')
 
   elif difficulty=='2' or difficulty.upper()=='MEDIUM':
     print('MEDIUM difficulty selected')
-    gameModeSel(difficulty)
+    gameModeSel('MEDIUM')
     
   elif difficulty=='3'or difficulty.upper()=='HARD':
     print('Your bravery will be remembered soldier, entering HARD mode')
-    return difficulty
+    gameModeSel('HARD')
 
   elif difficulty=='99'or difficulty.upper()=='LEGACY':
     print('Good to see you back Veteran, loading LEGACY mode')
-    return difficulty
+    return 0
     
   else:
     print('Invalid difficulty choice, try again')
@@ -45,7 +46,18 @@ def gameModeSel(diff):
   print('Select game mode:')
   print('1.  Cities\n2.  Footballers\n3.  Famous People')
   gamemode=input()
+  
   if gamemode=='1'or gamemode.lower()=='cities':
-    print("Launching "+gamemode+' mode in'+diff+' difficulty')
+    print("Launching CITIES mode in "+diff+' difficulty')
+
+  elif gamemode=='2' or gamemode.lower()=='footballers':
+    print("Launching FOOTBALLERS mode in "+diff+' difficulty')
+
+  elif gamemode=='3' or gamemode.lower()=='famous people':
+    print("Launching Famous People mode in "+diff+' difficulty') 
+
+  else:
+    print('Invalid game mode choice, try again')
+    gameModeSel(diff)
   
 welcome()
