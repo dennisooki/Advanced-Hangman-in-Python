@@ -1,0 +1,289 @@
+{
+  "cities": {
+    "Kampala": {
+      "continent": "Africa",
+      "country": "Uganda",
+      "region": "East"
+    },
+    "Vienna": {
+      "continent": "Europe",
+      "country": "Austria",
+      "region": "Central"
+    },
+    "Kiribati": {
+      "continent": "Oceania",
+      "country": "Tarawa",
+      "region": "Central"
+    },
+    "Beijing": {
+      "continent": "Asia",
+      "country": "China",
+      "region": "East"
+    },
+    "Brasilia": {
+      "continent": "South America",
+      "country": "Brazil",
+      "region": "Eastern"
+    },
+    "Santiago": {
+      "continent": "South America",
+      "country": "Chile",
+      "region": "Western"
+    },
+    "Wellington": {
+      "continent": "Oceania",
+      "country": "New Zealand",
+      "region": "Southern"
+    },
+    "Niamey": {
+      "continent": "Africa",
+      "country": "Niger",
+      "region": "Western"
+    },
+    "Baku": {
+      "continent": "Asia",
+      "country": "Azerbaijan",
+      "region": "SouthWestern"
+    },
+    "Kinshasa": {
+      "continent": "Africa",
+      "country": "Democratic Republic of the Congo",
+      "region": "Central"
+    },
+    "Reykjavik": {
+      "continent": "Europe",
+      "country": "Iceland",
+      "region": "Northern"
+    },
+    "Nairobi": {
+      "continent": "Africa",
+      "country": "Kenya",
+      "region": "Eastern"
+    },
+    "Ontario": {
+      "continent": "North America",
+      "country": "Canada",
+      "region": "Northern"
+    },
+    "Ulaanbaatar": {
+      "continent": "Asia",
+      "country": "Mongolia",
+      "region": "Central"
+    },
+    "Sarajevo": {
+      "continent": "Europe",
+      "country": "Bosnia and Herzegovina",
+      "region": "Balkans"
+    },
+    "Bucharest": {
+      "continent": "Europe",
+      "country": "Romania top g",
+      "region": "Balkans"
+    },
+    "Djibouti": {
+      "continent": "Africa",
+      "country": "Djibouti",
+      "region": "Eastern"
+    },
+    "Thimphu": {
+      "continent": "Asia",
+      "country": "Bhutan",
+      "region": "Southern"
+    },
+    "Havana": {
+      "continent": "North America",
+      "country": "Cuba",
+      "region": "Northern Carribean Region"
+    },
+    "Belmopan": {
+      "continent": "Central America",
+      "country": "Belize",
+      "region": "Eastern"
+    },
+    "Managua": {
+      "continent": "Central America",
+      "country": "Nicaragua",
+      "region": "Isthmas"
+    }
+  },
+  "footballers": {
+    "Maguire": {
+      "nationality": "English",
+      "position": "Defender",
+      "Club": "Manchester Utd"
+    },
+    "Ronaldinho": {
+      "nationality": "Brazilian",
+      "position": "Midfielder",
+      "Club": "Retired"
+    },
+    "Neymar": {
+      "nationality": "Brazilian",
+      "position": "Forward",
+      "Club": "PSG"
+    },
+    "Messi": {
+      "nationality": "Argentine",
+      "position": "Forward",
+      "Club": "PSG"
+    },
+    "Ronaldo": {
+      "nationality": "Portugese",
+      "position": "Forward",
+      "Club": "Manchester Utd"
+    },
+    "Foden": {
+      "nationality": "English",
+      "position": "Midfielder",
+      "Club": "Man City"
+    },
+    "Sterling": {
+      "nationality": "English",
+      "position": "Forward",
+      "Club": "Chelsea"
+    },
+    "Haaland": {
+      "nationality": "Norwegian",
+      "position": "Forward",
+      "Club": "Man City"
+    },
+    "Mbappe": {
+      "nationality": "French",
+      "position": "Forward",
+      "Club": "PSG"
+    },
+    "Vinicius": {
+      "nationality": "Brazilian",
+      "position": "Forward",
+      "Club": "Real Madrid"
+    },
+    "Kaka": {
+      "nationality": "Brazil",
+      "position": "Midfielder",
+      "Club": "Retired"
+    },
+    "Ramos": {
+      "nationality": "Spain",
+      "position": "Defender",
+      "Club": "PSG"
+    },
+    "Pique": {
+      "nationality": "Spain",
+      "position": "Defender",
+      "Club": "Barcelona"
+    },
+    "Beckham": {
+      "nationality": "English",
+      "position": "Midfielder",
+      "Club": "Retired"
+    },
+    "Ibrahimovic": {
+      "nationality": "Swedish",
+      "position": "Forward",
+      "Club": "AC Milan"
+    },
+    "Sancho": {
+      "nationality": "English",
+      "position": "Forward",
+      "Club": "Manchester Utd"
+    },
+    "Shakes": {
+      "nationality": "South African",
+      "position": "Forward",
+      "Club": "Supa Strikas"
+    },
+    "Hulk": {
+      "nationality": "Brazilian",
+      "position": "Forward",
+      "Club": "Atletico Miniero"
+    },
+    "Pogba": {
+      "nationality": "Italian",
+      "position": "Midfielder",
+      "Club": "Juventus"
+    },
+    "Donnarumma": {
+      "nationality": "Italian",
+      "position": "Goalkeeper",
+      "Club": "PSG"
+    },
+    "Pele": {
+      "nationality": "Brazilian",
+      "position": "Forward",
+      "Club": "Retired"
+    },
+    "Maradona": {
+      "nationality": "Argentine",
+      "position": "Midfielder",
+      "Club": "Retired"
+    },
+    "Drogba": {
+      "nationality": "Ivorian",
+      "position": "Forward",
+      "Club": "Retired"
+    },
+    "Bruyne": {
+      "nationality": "Belgian",
+      "position": "Midfielder",
+      "Club": "Man City"
+    }
+  },
+  "thefamous": {
+    "Kankan": {
+      "profession": "Rapper",
+      "sex": "male"
+    },
+    "ShakeSpeare": {
+      "profession": "Playwright",
+      "sex": "male"
+    },
+    "Trump": {
+      "profession": "Media Personality",
+      "sex": "male"
+    },
+    "Jada": {
+      "profession": "G.I. Jane 2",
+      "sex": "female"
+    },
+    "Pewdiepie": {
+      "profession": "Youtuber",
+      "sex": "male"
+    },
+    "Shrek": {
+      "profession": "Fictional Character",
+      "sex": "male"
+    },
+    "Einstein": {
+      "profession": "Physicist",
+      "sex": "male"
+    },
+    "Beyonce": {
+      "profession": "Musician",
+      "sex": "female"
+    },
+    "Rihanna": {
+      "profession": "Musician",
+      "sex": "female"
+    },
+    "Tate": {
+      "profession": "Media Personality, first name Andrew",
+      "sex": "male"
+    },
+    "Youngboy": {
+      "profession": "Rapper",
+      "sex": "male"
+    },
+    "Mayweather": {
+      "profession": "Boxer",
+      "sex": "male"
+    },
+    "Delilah": {
+      "profession": "Samson's wife",
+      "sex": "female"
+    },
+    "Disney": {
+      "profession": "Animator,Producer",
+      "sex": "male"
+    }
+  }
+}
