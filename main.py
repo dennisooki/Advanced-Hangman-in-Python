@@ -120,12 +120,12 @@ def gameModeSel(diff):
 
 def getWord(gmode,diff):
     prelist=[] 
-    hintlist=[]
+    hintlist={}
     for i in words[gmode.lower()]:
         prelist.append(i)			#this loop gets the words 2 b guessed into a list        
     
     word2guess=random.choice(prelist)
-    hintlist= words[gmode.lower()][word2guess]
+    hintlist= words[gmode.lower()][word2guess]    #funnily enough hintlist is actually a dictionary
               
     playGame(word2guess,diff,hintlist)
     
@@ -201,10 +201,10 @@ def getHint(hints,diff,hintlist,turns):
         return hints,turns
                            
     elif diff=='MEDIUM' and hints!=len(hintlist):
-        print(list(hintlist)[hints],':',list(hintlist)[hints])
+        print(list(hintlist)[hints],':',hintlist[list(hintlist)[hints]])
         hints+=1
         return hints,turns
-       
+
     else:
         print('NO MORE HINTS AVAILABLE')
         turns+=1
@@ -213,6 +213,8 @@ def getHint(hints,diff,hintlist,turns):
     
           
 welcome()
+# hintlist= words['cities']
+# print(hintlist)
 
 
 
