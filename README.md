@@ -7,3 +7,6 @@ Legacy mode is also available for players who wish to play using the original Ha
 
 
 All words are sourced from the included words.json file I created.
+
+
+<iframe src="https://trinket.io/embed/python3/70ab555da0?runOption=run" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
