@@ -1,5 +1,5 @@
 # Advanced-Hangman-in-Python
-Advanced Hangman CLI allows the player to pick word sources from 3 categories i.e capital cities, footballers or famous people.
+Advanced Hangman CLI allows the player to pick word sources from 3 categories: capital cities, footballers or famous people.
 
 The player also has a range of game difficulties to play the respective categories in.
 
