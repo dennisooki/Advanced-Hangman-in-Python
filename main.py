@@ -99,11 +99,11 @@ def difficultySel():
 def gameModeSel(diff):
   time.sleep(1)  
   print('Select game mode:')
-  print('1.  Cities\n2.  Footballers\n3.  Famous People')   
+  print('1.  Capital Cities\n2.  Footballers\n3.  Famous People')   
   gamemode=input()
   
   if gamemode=='1'or gamemode.lower()=='cities':
-    print("Launching CITIES mode in "+diff+' difficulty')
+    print("Launching CAPITAL CITIES mode in "+diff+' difficulty')
     getWord('CITIES',diff)
 
   elif gamemode=='2' or gamemode.lower()=='footballers':
