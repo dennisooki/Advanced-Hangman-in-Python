@@ -6,15 +6,69 @@ with open('words.json') as f:
 
         
 
+hangman_pics = {
+    
+    6: """
+            x-------x
+            |
+            |
+            |
+            |
+            |
+        """,
+    5: """
+            x-------x
+            |       |
+            |       0
+            |
+            |
+            |
+        """,
+    4: """
+            x-------x
+            |       |
+            |       0
+            |       |
+            |
+            |
+        """,
+    3: """
+            x-------x
+            |       |
+            |       0
+            |      /|\\
+            |
+            |
+        """,
+    2: """
+            x-------x
+            |       |
+            |       0
+            |      /|\\
+            |      /
+            |
+        """,
+    1: """
+            x-------x
+            |       |
+            |       0
+            |      /|\\
+            |      / \\
+            |
+        """
+}
 
 def welcome():
-  print("Welcome Enter your name:")
-  player=input()
-  print("Hi "+player+". Select difficulty level:")
-  time.sleep(1)
-  difficultySel()
+    print('''     _       _                               _   _   _                                         
+    / \   __| |_   ____ _ _ __   ___ ___  __| | | | | | __ _ _ __   __ _ _ __ ___   __ _ _ __  
+   / _ \ / _` \ \ / / _` | '_ \ / __/ _ \/ _` | | |_| |/ _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
+  / ___ \ (_| |\ V / (_| | | | | (_|  __/ (_| | |  _  | (_| | | | | (_| | | | | | | (_| | | | |
+ /_/   \_\__,_| \_/ \__,_|_| |_|\___\___|\__,_| |_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+                                                                   |___/                        \'''''')
+    difficultySel()
 
 def difficultySel():
+  print("Select difficulty level:")  
   print("1.  EASY-Get hints without losing turns")
   print("2.  MEDIUM-Getting a hint reduces your turns by 1")
   print("3.  HARD-No hints")
@@ -42,9 +96,9 @@ def difficultySel():
     difficultySel()
 
 def gameModeSel(diff):
-  time.sleep(1.5)  
+  time.sleep(1)  
   print('Select game mode:')
-  print('1.  Cities\n2.  Footballers\n3.  Famous People')   #change these to \t
+  print('1.  Cities\n2.  Footballers\n3.  Famous People')   
   gamemode=input()
   
   if gamemode=='1'or gamemode.lower()=='cities':
@@ -71,19 +125,16 @@ def getWord(gmode,diff):
         prelist.append(i)			#this loop gets the words 2 b guessed into a list        
     
     word2guess=random.choice(prelist)
-    for i,j in words[gmode.lower()][word2guess].items():
-    	hintlist.append(j)
-           
+    hintlist= words[gmode.lower()][word2guess]
+              
     playGame(word2guess,diff,hintlist)
     
         
-
-          
-
+         
 
 def playGame(word2guess,diff,hintlist):
-    turns = 10
-    hints = 3
+    turns = 6
+    hints = 0
     # totalguess=''
     builtword=[]
     confirmword=[]
@@ -99,6 +150,10 @@ def playGame(word2guess,diff,hintlist):
     while turns>0 and confirmword!=builtword:
         
         currentguess=input()
+        while not currentguess:
+            print('Please give me something to work with:')
+            currentguess=input()
+            
         j=-1											#j keeps track of pstn in builtword list
         for i in word2guess:
             j+=1
@@ -106,22 +161,31 @@ def playGame(word2guess,diff,hintlist):
                 builtword[j]=i+' '
                 
         if currentguess=='?':
-        	hints,turns=getHint(hints,diff,hintlist,turns) 	#impliment hint here
-        
-        if currentguess.lower() not in word2guess.lower():
+            if diff=='MEDIUM':
+                  print(hangman_pics[turns])
+            hints,turns=getHint(hints,diff,hintlist,turns) 	#impliment hint here
+        	 
+
+        elif currentguess.lower() not in word2guess.lower():
+            print(hangman_pics[turns])
             turns-=1
         
         print('\n')
-        if turns>10:
-          turns=10        
+        if turns>6:
+          turns=6        
         print(''.join(builtword))
         print('You have {} chances left'.format(turns))
         
     if confirmword==builtword:
         print("\nYou won with {} chances and {} hints left".format(turns,hints))
-    
-    
-    
+    if turns==0:
+        print("You lost, type 1 to play again or any other key to quit da game")
+        quit=input()
+        if quit=='1':
+            difficultySel()
+        else:
+            print('Closing game,ty 4 trying it out <3')
+        
     
 def getHint(hints,diff,hintlist,turns):
     if diff=='HARD' or diff=='LEGACY':
@@ -129,51 +193,25 @@ def getHint(hints,diff,hintlist,turns):
         time.sleep(1)
         turns+=1
         return hints,turns
-    elif diff=='EASY':
-        if hints==3:
-            print(hintlist[0])
-            hints-=1
-            turns+=1
-            return hints,turns
-             
-        elif hints==2:
-            print(hintlist[1])
-            hints-=1
-            turns+=1
-            return hints,turns
-            
-        elif hints==1:
-            print(hintlist[2])
-            hints-=1
-            turns+=1
-            return hints,turns
-             
-            
-    elif diff=='MEDIUM':
-        if hints==3:
-            print(hintlist[0])
-            hints-=1
-            return hints,turns
-             
-        elif hints==2:
-            print(hintlist[1])
-            hints-=1
-            return hints,turns
-            
-        elif hints==1:
-            print(hintlist[2])
-            hints-=1
-            return hints,turns
-        elif hints==0:
-            print('NO MORE HINTS AVAILABLE')
-            turns+=1
-            return hints,turns
+    elif diff=='EASY' and hints!=len(hintlist):
+        print(hintlist)
+        print(list(hintlist)[hints],':',hintlist[list(hintlist)[hints]])
+        hints+=1
+        turns+=1
+        return hints,turns
+                           
+    elif diff=='MEDIUM' and hints!=len(hintlist):
+        print(list(hintlist)[hints],':',list(hintlist)[hints])
+        hints+=1
+        return hints,turns
+       
+    else:
+        print('NO MORE HINTS AVAILABLE')
+        turns+=1
+        return hints,turns
     
     
-    
-
-# getWord('FOOTBALLERS','LEGACY')  
-# playGame('Ronaldo',2)        
+          
 welcome()
 
 

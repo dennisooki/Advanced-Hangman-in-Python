@@ -1,120 +1,110 @@
-/*
-Copyright 2022|DENNIS OOKI
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-End license text.
-*/
 
 {
   "cities": {
     "Kampala": {
       "continent": "Africa",
-      "country": "Uganda",
-      "region": "East"
+      "region": "East",
+      "country": "Uganda"
     },
     "Vienna": {
       "continent": "Europe",
-      "country": "Austria",
-      "region": "Central"
+      "region": "Central",
+      "country": "Austria"
     },
     "Kiribati": {
       "continent": "Oceania",
-      "country": "Tarawa",
-      "region": "Central"
+      "region": "Central",
+      "country": "Tarawa"
     },
     "Beijing": {
       "continent": "Asia",
-      "country": "China",
-      "region": "East"
+      "region": "East",
+      "country": "China"
     },
     "Brasilia": {
       "continent": "South America",
-      "country": "Brazil",
-      "region": "Eastern"
+      "region": "Eastern",
+      "country": "Brazil"
     },
     "Santiago": {
       "continent": "South America",
-      "country": "Chile",
-      "region": "Western"
+      "region": "Western",
+      "country": "Chile"
     },
     "Wellington": {
       "continent": "Oceania",
-      "country": "New Zealand",
-      "region": "Southern"
+      "region": "Southern",
+      "country": "New Zealand"
     },
     "Niamey": {
       "continent": "Africa",
-      "country": "Niger",
-      "region": "Western"
+      "region": "Western",
+      "country": "Niger"
     },
     "Baku": {
       "continent": "Asia",
-      "country": "Azerbaijan",
-      "region": "SouthWestern"
+      "region": "SouthWestern",
+      "country": "Azerbaijan"
     },
     "Kinshasa": {
       "continent": "Africa",
-      "country": "Democratic Republic of the Congo",
-      "region": "Central"
+      "region": "Central",
+      "country": "Democratic Republic of the Congo"
     },
     "Reykjavik": {
       "continent": "Europe",
-      "country": "Iceland",
-      "region": "Northern"
+      "region": "Northern",
+      "country": "Iceland"
     },
     "Nairobi": {
       "continent": "Africa",
-      "country": "Kenya",
-      "region": "Eastern"
+      "region": "Eastern",
+      "country": "Kenya"
     },
     "Ontario": {
       "continent": "North America",
-      "country": "Canada",
-      "region": "Northern"
+      "region": "Northern",
+      "country": "Canada"
     },
     "Ulaanbaatar": {
       "continent": "Asia",
-      "country": "Mongolia",
-      "region": "Central"
+      "region": "Central",
+      "country": "Mongolia"
     },
     "Sarajevo": {
       "continent": "Europe",
-      "country": "Bosnia and Herzegovina",
-      "region": "Balkans"
+      "region": "Balkans",
+      "country": "Bosnia and Herzegovina"
     },
     "Bucharest": {
       "continent": "Europe",
-      "country": "Romania top g",
-      "region": "Balkans"
+      "region": "Balkans",
+      "country": "Romania top G"
     },
     "Djibouti": {
       "continent": "Africa",
-      "country": "Djibouti",
-      "region": "Eastern"
+      "region": "Eastern",
+      "country": "Djibouti"
     },
     "Thimphu": {
       "continent": "Asia",
-      "country": "Bhutan",
-      "region": "Southern"
+      "region": "Southern",
+      "country": "Bhutan"
     },
     "Havana": {
       "continent": "North America",
-      "country": "Cuba",
-      "region": "Northern Carribean Region"
+      "region": "Northern Carribean Region",
+      "country": "Cuba"
     },
     "Belmopan": {
       "continent": "Central America",
-      "country": "Belize",
-      "region": "Eastern"
+      "region": "Eastern",
+      "country": "Belize"
     },
     "Managua": {
       "continent": "Central America",
-      "country": "Nicaragua",
-      "region": "Isthmas"
+      "region": "Isthmas",
+      "country": "Nicaragua"
     }
   },
   "footballers": {
@@ -169,7 +159,7 @@ End license text.
       "Club": "Real Madrid"
     },
     "Kaka": {
-      "nationality": "Brazil",
+      "nationality": "Brazilian",
       "position": "Midfielder",
       "Club": "Retired"
     },
