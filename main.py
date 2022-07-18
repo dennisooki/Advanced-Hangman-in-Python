@@ -89,7 +89,8 @@ def difficultySel():
 
   elif difficulty=='99'or difficulty.upper()=='LEGACY':
     print('Good to see you back Veteran, loading LEGACY mode')
-    return 0
+    time.sleep(1)
+    getWord('LEGACY','LEGACY')
     
   else:
     print('Invalid difficulty choice, try again')
@@ -121,16 +122,21 @@ def gameModeSel(diff):
 def getWord(gmode,diff):
     prelist=[] 
     hintlist={}
-    for i in words[gmode.lower()]:
-        prelist.append(i)			#this loop gets the words 2 b guessed into a list        
+    legacylist=[]
+    if diff!='LEGACY':
+        for i in words[gmode.lower()]:
+            prelist.append(i)			#this loop gets the words 2 b guessed into a list        
+        word2guess=random.choice(prelist)
+        hintlist= words[gmode.lower()][word2guess]    #funnily enough hintlist is actually a dictionary
     
-    word2guess=random.choice(prelist)
-    hintlist= words[gmode.lower()][word2guess]    #funnily enough hintlist is actually a dictionary
-              
+    else:
+        for i in words:
+            for j in words[i]:
+                legacylist.append(j)
+        word2guess=random.choice(legacylist)
+    
     playGame(word2guess,diff,hintlist)
-    
-        
-         
+                     
 
 def playGame(word2guess,diff,hintlist):
     turns = 6
@@ -177,37 +183,40 @@ def playGame(word2guess,diff,hintlist):
         print('You have {} chances left'.format(turns))
         
     if confirmword==builtword:
-        print("\nYou won with {} chances and {} hints left".format(turns,hints))
+        print("\nYou won with {} chances left and {} hints used".format(turns,hints))
+        print('Type 1 to play again or any other key to quit da game')
+        quit=input()
+        if quit=='1':
+            difficultySel()
+        else:
+            print('Ty 4 trying the game out <3')
     if turns==0:
         print("You lost, type 1 to play again or any other key to quit da game")
         quit=input()
         if quit=='1':
             difficultySel()
         else:
-            print('Closing game,ty 4 trying it out <3')
+            print('Ty 4 trying the game out <3')
         
     
 def getHint(hints,diff,hintlist,turns):
     if diff=='HARD' or diff=='LEGACY':
         print('NO HINTS IN {} DIFFICULTY'.format(diff))
         time.sleep(1)
-        turns+=1
         return hints,turns
     elif diff=='EASY' and hints!=len(hintlist):
-        print(hintlist)
         print(list(hintlist)[hints],':',hintlist[list(hintlist)[hints]])
         hints+=1
-        turns+=1
         return hints,turns
                            
     elif diff=='MEDIUM' and hints!=len(hintlist):
         print(list(hintlist)[hints],':',hintlist[list(hintlist)[hints]])
         hints+=1
+        turns-=1
         return hints,turns
 
     else:
         print('NO MORE HINTS AVAILABLE')
-        turns+=1
         return hints,turns
     
     
